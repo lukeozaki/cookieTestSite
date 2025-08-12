@@ -1358,10 +1358,6 @@ input, select, textarea {
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
 }
-
-div{
-	border: 1px solid #323130;
-}
     
 .div1 {
     grid-column: span 5 / span 5;
