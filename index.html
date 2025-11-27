@@ -57,13 +57,24 @@
 					});
 			})('c75aada1-0706-4691-afda-072e45977313');
 		</script>
-
+		<script>
+		function myFunction() {
+			console.log("Clicked!");
+			pendo.track("Registered", {
+				plan: "Pro Annual",
+				accountType: "Facebook",
+				activeGuide: pendo.getActiveGuide().guide.name,
+				width: JSON.stringify(window.innerWidth),
+				height: JSON.stringify(window.innerHeight)
+			});
+		}
+		</script>
 	</head>
 	<body>	
 		<div class="parent">
 			<div class="div1">1</div>
 			<div class="div2">2</div>
-			<div class="div3">3</div>
+			<div class="div3"><a href="#" onclick="myFunction()">Click me</a></div>
 			<div class="div4">4</div>
 			<div class="div5">5</div>
 			<div class="div6">6</div>
