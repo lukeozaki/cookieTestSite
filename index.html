@@ -65,14 +65,14 @@
 				console.log("Clicked!");
 				
 				pendo.startSendingEvents();
-
-				// ⏱ wait 300ms
 				await wait(300);
 
 				pendo.track("Registered", {
 					plan: "Pro Annual",
 					accountType: "Facebook",
 				});
+				
+				await wait(300);
 
 				pendo.stopSendingEvents();
 			}
