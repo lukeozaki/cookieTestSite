@@ -58,15 +58,24 @@
 			})('c75aada1-0706-4691-afda-072e45977313');
 		</script>
 		<script>
-		function myFunction() {
-			console.log("Clicked!");
-			pendo.startSendingEvents();
-			pendo.track("Registered", {
-				plan: "Pro Annual",
-				accountType: "Facebook",
-			});
-			pendo.stopSendingEvents();
-		}
+			function wait(ms) {
+  				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+			async function myFunction() {
+				console.log("Clicked!");
+				
+				pendo.startSendingEvents();
+
+				// ⏱ wait 300ms
+				await wait(300);
+
+				pendo.track("Registered", {
+					plan: "Pro Annual",
+					accountType: "Facebook",
+				});
+
+				pendo.stopSendingEvents();
+			}
 		</script>
 	</head>
 	<body>	
